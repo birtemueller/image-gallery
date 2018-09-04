@@ -21,8 +21,6 @@ class SearchForm extends Component {
 
     render() {
 
-        console.log(this.state.searchTerm);
-
         return (
             <form className="search-form" onSubmit={this.handleSubmit}>
                 <input type="search"

@@ -8,7 +8,6 @@ import axios from 'axios';
 import apiKey from '../Config'
 
 import Images from './Images';
-import SearchForm from './SearchForm'
 
 export default class Results extends Component  {
 
