@@ -17,17 +17,7 @@ const Navigation = props => (
                 <li><a href="/computers">Computers</a></li>
             </ul>
         </nav>
-
-
-
-
     </div>
-
-
-
-
-
-
 );
 
 export default Navigation;
