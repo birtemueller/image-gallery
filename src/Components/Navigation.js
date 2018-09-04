@@ -6,7 +6,6 @@ import {
     Link,
     NavLink
 } from 'react-router-dom';
-import Results from "./Results";
 
 const Navigation = props => (
 
@@ -14,7 +13,8 @@ const Navigation = props => (
         <nav className="main-nav">
             <ul>
                 <li><a href="/cats">Cats</a></li>
-
+                <li><a href="/dogs">Dogs</a></li>
+                <li><a href="/computers">Computers</a></li>
             </ul>
         </nav>
 
