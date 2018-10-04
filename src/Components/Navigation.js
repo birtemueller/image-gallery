@@ -1,20 +1,16 @@
 import React from 'react';
 import {
-    BrowserRouter,
-    Route,
-    Switch,
-    Link,
     NavLink
 } from 'react-router-dom';
 
-const Navigation = props => (
-
+//creates a navigation component to navigate between different search queries
+const Navigation = () => (
     <div>
         <nav className="main-nav">
             <ul>
-                <li><a href="/cats">Cats</a></li>
-                <li><a href="/dogs">Dogs</a></li>
-                <li><a href="/computers">Computers</a></li>
+                <li><NavLink to="/search/cats">Cats</NavLink></li>
+                <li><NavLink to="/search/dogs">Dogs</NavLink></li>
+                <li><NavLink to="/search/computers">Computers</NavLink></li>
             </ul>
         </nav>
     </div>
