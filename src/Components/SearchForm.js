@@ -7,17 +7,17 @@ class SearchForm extends Component {
         searchTerm: ""
     };
 
-    onSearch = (e) => {
+    onSearch = e => {
         this.setState({ searchTerm: e.target.value });
     };
 
-    handleSubmit = (e) => {
+    handleSubmit = e => {
         e.preventDefault();
         e.currentTarget.reset();
         let searchQuery = this.state.searchTerm;
-        let path = `/${searchQuery}`;
-        //this.props.history.push(path);
-    }
+        let path = `/search/${searchQuery}`;
+        this.props.history.push(path);
+    };
 
     render() {
 
@@ -39,6 +39,6 @@ class SearchForm extends Component {
 
     }
 
-};
+}
 
-export default SearchForm;
+export default withRouter(SearchForm);
