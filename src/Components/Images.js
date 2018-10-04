@@ -1,32 +1,29 @@
 import React from 'react';
 import Image from './Image';
-import NoResults from './NoResults';
 
 const Images = props => {
 
     const results = props.data;
+    const query = props.query;
     let images;
-    if(results.length > 0) {
+    //loops through the results array and processes the data to make it usable
         images = results.map(data =>
             <Image
                 url={`https://farm${data.farm}.staticflickr.com/${data.server}/${data.id}_${data.secret}.jpg`}
                 key={data.id}
                 alt={data.title}/>
         );
-    } else {
-        images = <NoResults />
-    }
 
+    //creates a list of images
     return(
         <div className="photo-container">
-            <h2>Results</h2>
+            <h2>Results for {query}</h2>
             <ul>
                 {images}
             </ul>
         </div>
     );
-
-}
+};
 
 
 export default Images;
