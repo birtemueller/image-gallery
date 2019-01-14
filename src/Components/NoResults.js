@@ -1,6 +1,6 @@
 import React from 'react';
 
-/*404 page to be displayed in case the user has entered a non-valid URL.*/
+/*Error page that indicates if the search didn't return any results.*/
 const NoResults = () => (
     <li className="not-found">
         <h3>No Results Found</h3>

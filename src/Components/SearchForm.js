@@ -11,6 +11,7 @@ class SearchForm extends Component {
         this.setState({ searchTerm: e.target.value });
     };
 
+    /*take the search term and add it to the URL*/
     handleSubmit = e => {
         e.preventDefault();
         e.currentTarget.reset();
@@ -20,12 +21,13 @@ class SearchForm extends Component {
     };
 
     render() {
-
+        /*search form is rendered here*/
         return (
             <form className="search-form" onSubmit={this.handleSubmit}>
                 <input type="search"
                        name="search"
                        placeholder="Search"
+                       /*on submit the search term is taken and added to the component's state*/
                        onChange={this.onSearch}
                        ref={ (input) => this.query = input }/>
                 <button type="submit" className="search-button">
